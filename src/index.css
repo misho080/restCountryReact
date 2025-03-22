@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kumbh+Sans:wght@100..900&family=League+Spartan:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Overpass:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.headerContainer {
+  width: 1510px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 0px 15px 0px gray;
+  ;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.headerTitle {
+  font-family: Nunito Sans;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #111517;
+  cursor: pointer;
+  
+}
+
+.headerContainer>span {
+  font-family: Nunito Sans;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #111517;
+  cursor: pointer;
+}
+
+.cards>img {
+  width: 264px;
+  height: 160px;
+  border-radius: 8px;
+
+}
+
+.cards {
+  width: 264px;
+  height: 336px;
+  box-shadow: 0px 0px 15px 0px gray;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.cardsContainer {
+  width: 1280px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-left: 110px;
+  margin-top: 30px;
+  gap: 74px;
+}
+
+.cards>h1 {
+  font-family: Nunito Sans;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0px;
+  margin-left: 25px;
+  margin-top: 15px;
+  position: absolute;
+  color: #111517;
+}
+
+.moreInfo {
+  display: flex;
+  margin-top: 7px;
+}
+
+.moreInfoContainer {
+  margin-top: 60px;
+  margin-left: 30px;
+
+}
+
+.moreInfo>p {
+  font-family: Nunito Sans;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0px;
+  color: #111517;
+}
+
+.moreInfo>span {
+  font-family: Nunito Sans;
+  font-weight: 350;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0px;
+  color: #111517;
+}
+
+.searchContainer>input {
+  width: 480px;
+  height: 56px;
+  margin-top: 30px;
+  margin-left: 110px;
+  border-style: none;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 0px gray;
+}
+
+.filterButton {
+  margin-left: 1190px;
+  position: absolute;
+  margin-top: -60px;
+  width: 200px;
+  height: 56px;
+  border-radius: 5px;
+  border-style: none;
+  box-shadow: 0px 0px 10px 0px gray;
+  font-family: Nunito Sans;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  color: #111517;
+}
+
+.filterContainer {
+  box-shadow: 0px 0px 10px 0px gray;
+  margin-left: 1190px;
+  border-style: none;
+  border-radius: 5px;
+  width: 200px;
+  height: 164px;
+  position: absolute;
+  background-color: white;
+
+}
+
+.regionName {
+  margin-top: 9px;
+  margin-left: 15px;
+  margin-top: 10px;
+  font-family: Nunito Sans;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  color: #111517;
+  cursor: pointer;
+}
