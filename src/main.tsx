@@ -7,11 +7,16 @@ import America from './pages/America.tsx'
 import Asia from './pages/Asia.tsx'
 import Europe from './pages/Europe.tsx'
 import Oceania from './pages/Oceania.tsx'
+import CountryDetails from './pages/CountryDetails.tsx'
 
 const router = createBrowserRouter([
     {
         path:"/",
         element:<App/>
+    },
+    {
+        path:"/CountryDedails",
+        element:<CountryDetails/>
     },
     {
         path:"/africa",

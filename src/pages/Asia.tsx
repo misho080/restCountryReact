@@ -5,12 +5,15 @@ import Input from "../components/search/Input"
 import axios from "axios"
 import FilterByRegion from "../components/filterCountries/FilterByRegion"
 import { countryTypes } from "../types/common"
+import { useNavigate } from "react-router-dom"
 
 
 const Asia = () => {
     const [countryData, setCountryData] = useState<countryTypes[]>([])
     const [inputValue, setInputValue] = useState("")
     const [showFilter, setShowFilter] = useState(false)
+    const location = useNavigate()
+
     useEffect(() => {
         const getCountryData = async () => {
             const responce = await axios.get("https://restcountries.com/v3.1/all")
@@ -22,6 +25,12 @@ const Asia = () => {
     const fillterCountryData = countryData.filter((country) => {
         return inputValue == "" || country.name.common.toLowerCase().includes(inputValue.toLowerCase())
     })
+
+    const handleClickCountryDetails = (country:countryTypes) => {
+        return location("/CountryDedails",{
+            state:country
+        })
+    }
 
     return (
         <div>
@@ -35,7 +44,7 @@ const Asia = () => {
                         .filter((country) => country.region === "Asia")
                         .map((country) => {
                             return (
-                                <div className='cards'>
+                                <div className='cards' onClick={() => handleClickCountryDetails(country)}>
                                     <img src={country.flags.svg} alt="flagsImg" />
                                     <h1>{country.name.common}</h1>
                                     <div className='moreInfoContainer'>

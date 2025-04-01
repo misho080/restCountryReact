@@ -6,12 +6,30 @@
   box-sizing: border-box;
 }
 
+.misho {
+  background-color: var(--body-bg-colour--);
+  width: 100%;
+  height: 100vh;
+}
+
+.liteMode {
+  --body-bg-colour--: #FFFFFF;
+  --border-colour--: gray;
+  --title-colour--: #111517;
+}
+
+.darkMode {
+  --body-bg-colour--: #202C36;
+  --title-colour--: #FFFFFF;
+  --cards-bg-colour--:#2B3844;
+}
+
 .headerContainer {
   width: 1510px;
   height: 80px;
   display: flex;
   justify-content: space-between;
-  box-shadow: 0px 0px 15px 0px gray;
+  box-shadow: 0px 0px 15px 0px var(--border-colour--);
   ;
   align-items: center;
   padding-left: 40px;
@@ -24,9 +42,9 @@
   font-size: 24px;
   line-height: 100%;
   letter-spacing: 0px;
-  color: #111517;
+  color: var(--title-colour--);
   cursor: pointer;
-  
+
 }
 
 .headerContainer>span {
@@ -35,7 +53,7 @@
   font-size: 16px;
   line-height: 100%;
   letter-spacing: 0px;
-  color: #111517;
+  color: var(--title-colour--);
   cursor: pointer;
 }
 
@@ -49,9 +67,10 @@
 .cards {
   width: 264px;
   height: 336px;
-  box-shadow: 0px 0px 15px 0px gray;
+  box-shadow: 0px 0px 15px 0px var(--border-colour--);
   border-radius: 8px;
   text-align: center;
+  background-color: var(--cards-bg-colour--);
 }
 
 .cardsContainer {
@@ -72,7 +91,7 @@
   margin-left: 25px;
   margin-top: 15px;
   position: absolute;
-  color: #111517;
+  color: var(--title-colour--);
 }
 
 .moreInfo {
@@ -92,7 +111,7 @@
   font-size: 16px;
   line-height: 16px;
   letter-spacing: 0px;
-  color: #111517;
+  color: var(--title-colour--);
 }
 
 .moreInfo>span {
@@ -101,7 +120,7 @@
   font-size: 15px;
   line-height: 16px;
   letter-spacing: 0px;
-  color: #111517;
+  color: var(--title-colour--);
 }
 
 .searchContainer>input {
@@ -111,7 +130,7 @@
   margin-left: 110px;
   border-style: none;
   border-radius: 8px;
-  box-shadow: 0px 0px 10px 0px gray;
+  box-shadow: 0px 0px 10px 0px var(--border-colour--);
 }
 
 .filterButton {
@@ -122,17 +141,17 @@
   height: 56px;
   border-radius: 5px;
   border-style: none;
-  box-shadow: 0px 0px 10px 0px gray;
+  box-shadow: 0px 0px 10px 0px var(--border-colour--);
   font-family: Nunito Sans;
   font-weight: 400;
   font-size: 15px;
   line-height: 20px;
   letter-spacing: 0px;
-  color: #111517;
+  color: var(--title-colour--);
 }
 
 .filterContainer {
-  box-shadow: 0px 0px 10px 0px gray;
+  box-shadow: 0px 0px 10px 0px var(--border-colour--);
   margin-left: 1190px;
   border-style: none;
   border-radius: 5px;
@@ -140,7 +159,7 @@
   height: 164px;
   position: absolute;
   background-color: white;
-
+  list-style: none;
 }
 
 .regionName {
@@ -152,6 +171,98 @@
   font-size: 15px;
   line-height: 20px;
   letter-spacing: 0px;
-  color: #111517;
+  color: var(--title-colour--);
   cursor: pointer;
+}
+
+.detaleContainer {
+  display: flex;
+  width: 1150px;
+  height: 600px;
+  margin-left: 170px;
+  margin-top: 55px;
+}
+
+.detailInfo {
+  width: 200px;
+  height: 323px;
+  align-items: end;
+  margin-top: 120px;
+  margin-left: 60px;
+
+}
+
+.spansContainer>span {
+  margin-top: 5px;
+  font-family: Nunito Sans;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 0px;
+  display: flex;
+  color: var(--title-colour--);
+}
+
+.spansContainer {
+  margin-top: 60px;
+}
+
+.spansContainer>span>p {
+  font-weight: 600;
+}
+
+.detailInfo>h1 {
+  position: absolute;
+  font-family: Nunito Sans;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: var(--title-colour--);
+}
+
+.mainIng {
+  width: 560px;
+  height: 401px;
+  margin-top: 70px;
+}
+
+.backButton {
+  width: 136px;
+  height: 40px;
+  margin-top: 50px;
+  margin-left: 170px;
+  position: absolute;
+  font-family: Nunito Sans;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  color: var(--title-colour--);
+  display: flex;
+  background-color: white;
+  border-style: none;
+  box-shadow: 0px 0px 10px 0px gray;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.BackIcon {
+  width: 23px;
+  height: 23px;
+  margin-top: 8px;
+  margin-left: 30px;
+  color: var(--title-colour--);
+}
+
+.backButton>p {
+  font-family: Nunito Sans;
+  font-weight: 350;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  color: var(--title-colour--);
+  margin-left: 13px;
+  margin-top: 9px;
+
 }
