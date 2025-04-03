@@ -20,8 +20,8 @@ export interface countryTypes {
 }
 
 export interface InputType {
-    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
-
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    src:string
 }
 
 export interface ButtonType {

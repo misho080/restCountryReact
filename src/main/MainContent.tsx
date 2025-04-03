@@ -6,6 +6,10 @@ import Button from '../components/filterCountries/Button'
 import FilterByRegion from '../components/filterCountries/FilterByRegion'
 import { countryTypes } from '../types/common'
 import { useNavigate } from 'react-router-dom'
+import darkModeIcon from "../assets/darkModeIcon.svg"
+import liteModeIcon from "../assets/9025960_sun_icon.svg"
+import darkModeSearchIcon from "../assets/search.svg"
+import liteModeSearckIcon from "../assets/Shape.svg"
 
 const MainContent = () => {
     const [countryData, setCountryData] = useState<countryTypes[]>([])
@@ -38,8 +42,8 @@ const MainContent = () => {
 
     return (
         <div className={darkMode ? "liteMode" : "darkMode"}>
-            <Header darkModeOnClick={() => handleDarkMode()} onClick={() => setShowFilter(false)} />
-            <Input onChange={(e) => setInputValue(e.target.value)} />
+            <Header imageSrc={darkMode?liteModeIcon: darkModeIcon } darkModeOnClick={() => handleDarkMode()} onClick={() => setShowFilter(false)} />
+            <Input onChange={(e) => setInputValue(e.target.value)} src={darkMode? liteModeSearckIcon: darkModeSearchIcon } />
             <Button onClick={() => setShowFilter(true)} />
             {showFilter && <FilterByRegion />}
             <div className='cardsContainer' >
