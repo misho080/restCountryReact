@@ -6,11 +6,16 @@ import axios from "axios"
 import FilterByRegion from "../components/filterCountries/FilterByRegion"
 import { countryTypes } from "../types/common"
 import { useNavigate } from "react-router-dom"
+import darkModeSearchIcon from "../assets/search.svg"
+import liteModeSearckIcon from "../assets/Shape.svg"
+import darkModeIcon from "../assets/darkModeIcon.svg"
+import liteModeIcon from "../assets/9025960_sun_icon.svg"
 
 const Europe = () => {
     const [countryData, setCountryData] = useState<countryTypes[]>([])
     const [inputValue, setInputValue] = useState("")
     const [showFilter, setShowFilter] = useState(false)
+    const [darkMode,setDarkMode]:any = useState ("liteMode")
     const location = useNavigate()
 
     useEffect(() => {
@@ -24,6 +29,10 @@ const Europe = () => {
     const fillterCountryData = countryData.filter((country) => {
         return inputValue == "" || country.name.common.toLowerCase().includes(inputValue.toLowerCase())
     })
+    
+    const handleDarkMode = () => {
+        setDarkMode(!darkMode)
+    }
 
     const handleClickCountryDetails = (country: countryTypes) => {
         return location("/CountryDedails", {
@@ -32,9 +41,9 @@ const Europe = () => {
     }
 
     return (
-        <div>
-            <Header />
-            <Input onChange={(e: any) => setInputValue(e.target.value)} />
+        <div className={darkMode? "liteMode": "darkMode"}>
+            <Header imageSrc={darkMode? liteModeIcon : darkModeIcon} darkModeOnClick={handleDarkMode} />
+            <Input src={darkMode? liteModeSearckIcon : darkModeSearchIcon} onChange={(e: any) => setInputValue(e.target.value)} />
             <Button onClick={() => setShowFilter(true)} />
             {showFilter && <FilterByRegion />}
             <div className='cardsContainer'>
