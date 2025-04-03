@@ -328,7 +328,7 @@ body {
   color: var(--title-color--);
 }
 
-@media(width > 375px) {
+@media(width < 375px) {
   body {
     width: 375px;
   }
