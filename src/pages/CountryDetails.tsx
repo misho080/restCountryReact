@@ -38,14 +38,6 @@ function CountryDetails() {
                   <span><p>Capital:</p>{data.capital}</span>
                 </div>
               </div>
-
-              <div className="detailInfo">
-                <div className="spansContainer">
-                  <span><p>Top Level Domain</p>{ data.tld}</span>
-                  <span><p>Currencies:</p>{data.car.side}</span>
-                  <span><p>Languages</p>{data.languages.eng}</span>
-                </div>
-              </div>
             </div>
           </>
         )
