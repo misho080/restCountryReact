@@ -41,6 +41,9 @@ body {
   padding-right: 40px;
 
 }
+.filterLink{
+  text-decoration: none;
+}
 
 .headerTitle {
   font-family: Nunito Sans;
